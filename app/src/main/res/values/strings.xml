@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">kel4_projekUAS</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="halaman_utama">Halaman Utama</string>
+    <string name="halaman_utama">MENU</string>
     <string name="halaman_kasus">Halaman Studi Kasus</string>
     <string name="halaman_pengetahuan">Halaman Pengetahuan</string>
     <string name="halaman_klasifikasi">Halaman Klasifikasi</string>
