@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">kel4_projekUAS</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="frag1">Halaman Studi Kasus</string>
+    <string name="frag2">Halaman Pengetahuan</string>
+    <string name="frag3">Halaman Klasifikasi</string>
 </resources>
