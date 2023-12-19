@@ -51,19 +51,25 @@
             android:background="@drawable/background1"
             android:layout_alignTop="@+id/judul"
             app:cardCornerRadius="18dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginTop="12dp"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:text="Kasus 1"/>
+            <ImageView
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="18dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/sapi"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Kasus 1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="30dp"
                 android:textSize="16sp"
@@ -79,10 +85,16 @@
             android:background="@drawable/background1"
             android:layout_alignTop="@+id/judul"
             app:cardCornerRadius="18dp">
+            <ImageView
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="18dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/sapi"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
                 android:textStyle="bold"
@@ -91,7 +103,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="30dp"
                 android:textSize="16sp"
@@ -107,10 +119,16 @@
             android:background="@drawable/background1"
             android:layout_alignTop="@+id/judul"
             app:cardCornerRadius="18dp">
+            <ImageView
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="18dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/sapi"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
                 android:textStyle="bold"
@@ -119,7 +137,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="30dp"
                 android:textSize="16sp"
@@ -135,10 +153,16 @@
             android:background="@drawable/background1"
             android:layout_alignTop="@+id/judul"
             app:cardCornerRadius="18dp">
+            <ImageView
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="18dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/sapi"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="12dp"
                 android:textStyle="bold"
@@ -147,7 +171,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="30dp"
                 android:textSize="16sp"
