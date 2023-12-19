@@ -1,14 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     tools:context=".HalamanKasus">
+
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="135dp"
+        android:layout_marginTop="60dp"
+        android:text="Studi Kasus"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_back" />
+    
+    <ImageView
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="100dp"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:background="@drawable/kasus1"
+        />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/background1"
+            android:layout_alignTop="@+id/judul"
+            app:cardCornerRadius="18dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Kasus 1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:text="jsndjksdvsd vdv dkvdfgfdgdgdhfdhfhfghgfngfngfngfngfngfnfnndvndvkdjvkdvdf"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/background1"
+            android:layout_alignTop="@+id/judul"
+            app:cardCornerRadius="18dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Kasus 2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:text="jsndjksdvsd vdv dkvdfgfdgdgdhfdhfhfghgfngfngfngfngfngfnfnndvndvkdjvkdvdf"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/background1"
+            android:layout_alignTop="@+id/judul"
+            app:cardCornerRadius="18dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Kasus 3"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/background1"
+            android:layout_alignTop="@+id/judul"
+            app:cardCornerRadius="18dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Kasus 4"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </FrameLayout>
