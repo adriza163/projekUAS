@@ -112,20 +112,25 @@
             android:background="@color/gray"/>
     </com.google.android.material.textfield.TextInputLayout>
     <LinearLayout
+        android:id="@+id/submitLayout"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="600dp"
         android:layout_marginLeft="120dp"
-        android:background="@drawable/background2">
+        android:background="@drawable/background2"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onSubmitClicked">
+
         <TextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="33dp"
-            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:text="Submit"
             android:textStyle="bold"
             android:textColor="@color/font"
             android:textSize="24sp"/>
     </LinearLayout>
+
 
 </FrameLayout>
