@@ -52,10 +52,11 @@
             android:layout_width="350sp"
             android:layout_height="300dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="188dp"
+            android:layout_marginTop="190dp"
             android:text="Herbivora merupakan istilah bagi hewan yang memakan tumbuhan atau lataboga dan tidak memakan daging. Herbivora terdiri dari dua kata, yaitu herba yang berasal dari bahasa Latin yang artinya tumbuh-tumbuhan, sedangkan vora asalnya dari bahasa Latin yaitu vorare yang memiliki arti untuk dimakan atau disantap. Sedangkan dalam pengertian lebih singkat, herbivora merupakan organisme yang memakan tumbuhan atau protein dari tumbuhan.
 Pada umumnya, hewan yang termasuk golongan herbivora biasanya hidup di tempat yang banyak sekali tumbuh rerumputan, seperti padang rumput, hutan dan persawahan. Selain itu, hewan golongan herbivora juga hidup dengan cara berkelompok sesuai dengan jenisnya. Herbivora adalah bentuk hewan yang mengkonsumsi atau memakan tanaman, jamur, dan sebagainya."
             android:textStyle="bold"
+            android:textSize="14sp"
             android:justificationMode="inter_word">
         </TextView>
     </LinearLayout>
