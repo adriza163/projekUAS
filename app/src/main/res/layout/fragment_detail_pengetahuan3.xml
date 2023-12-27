@@ -49,15 +49,15 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="350sp"
-            android:layout_height="500dp"
-            android:layout_marginLeft="30dp"
+            android:layout_width="320sp"
+            android:layout_height="450dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="188dp"
             android:text="Istilah omnivora berasal dari kata Latin omnis, yang artinya semua atau segalanya, dan vorare yang artinya makan. Hewan omnivora merupakan hewan pemakan segalanya, baik itu tumbuhan maupun daging. Hewan omnivora memiliki peran yang penting pada rantai makanan, yaitu sebagai penghasil energi dan nutrisi bagi organisme yang lain. Pada umumnya, omnivora menduduki tingkat trofik ketiga pada rantai makanan, bersama dengan hewan karnivora.
 Hewan omnivora jika tidak memburu, dia dapat juga diburu, sehingga dapat berperan menjadi predator sekaligus mangsa. Namun, ada pula hewan omnivora yang makan dari sisa hewan yang mati, namun juga makan buah-buahan.
 Untuk memakan makanannya yang berupa tumbuhan maupun daging, hewan omnivora memiliki struktur gigi yang tajam untuk merobek daging, dan gigi yang datar untuk mengunyah tumbuhan. Namun ada pula beberapa hewan omnivora yang tidak memiliki gigi, sehingga akan menyantap makanannya dengan cara menelan secara utuh."
             android:textStyle="bold"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:justificationMode="inter_word">
         </TextView>
     </LinearLayout>
