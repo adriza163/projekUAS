@@ -42,26 +42,33 @@
             android:src="@drawable/karni" />
 
     </androidx.cardview.widget.CardView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="320sp"
-            android:layout_height="450dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="188dp"
-            android:justificationMode="inter_word"
-            android:text="Karnivora merupakan hewan pemakan daging.  makhluk hidup yang mendapatkan energi dan nutrisi yang dibutuhkan dari sumber makanan berupa jaringan hewan, baik sebagai pemangsa hewan lain, maupun dari hewan yang telah mati dan membusuk. Dari sumber yang lain
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/gray">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Karnivora merupakan hewan pemakan daging.  makhluk hidup yang mendapatkan energi dan nutrisi yang dibutuhkan dari sumber makanan berupa jaringan hewan, baik sebagai pemangsa hewan lain, maupun dari hewan yang telah mati dan membusuk. Dari sumber yang lain
 Pengertian karnivor diambil dari bahasa Latin dari kata caro yang berarti daging dan kata vorare yang berarti makanan, dengan demikian dapat disimpulkan, bahwa hewan karnivora merupakan hewan pemakan daging.
 Karena sumber makanannya berupa daging, tak jarang hewan karnivora mendapat makanannya dengan memburu hewan karnivora lain di sekitarnya, maka hewan karnivora mendapat julukan sebagai predator. Apakah jahat? Tentu tidak, hal ini merupakan aspek penting dalam perannya sebagai penyeimbang ekosistem yang mencegah populasi hewan. Hewan karnivora berada di tingkat atas dalam rantai makanan Namun bukan hanya hewan, ternyata ada juga tumbuh-tumbuhan yang menangkap serangga, bahkan hewan kecil lainnya, tumbuhan ini disebut sebagai tumbuhan karnivora, begitu juga dengan fungi yang memakan hewan mikroskopis, juga disebut sebagai fungi karnivor."
-            android:textSize="13sp"
-            android:textStyle="bold">
-
-        </TextView>
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:justificationMode="inter_word">
+            </TextView>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </FrameLayout>
 
