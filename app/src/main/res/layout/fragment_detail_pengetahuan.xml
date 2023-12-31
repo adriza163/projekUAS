@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/green"
-    tools:context=".DetailPengetahuan">
+    tools:context=".DetailPengetahuan2">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -48,17 +48,26 @@
         android:layout_marginTop="90dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="320sp"
-            android:layout_height="450dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="188dp"
-            android:text="Herbivora merupakan istilah bagi hewan yang memakan tumbuhan atau lataboga dan tidak memakan daging. Herbivora terdiri dari dua kata, yaitu herba yang berasal dari bahasa Latin yang artinya tumbuh-tumbuhan, sedangkan vora asalnya dari bahasa Latin yaitu vorare yang memiliki arti untuk dimakan atau disantap. Sedangkan dalam pengertian lebih singkat, herbivora merupakan organisme yang memakan tumbuhan atau protein dari tumbuhan.
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/gray">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Herbivora merupakan istilah bagi hewan yang memakan tumbuhan atau lataboga dan tidak memakan daging. Herbivora terdiri dari dua kata, yaitu herba yang berasal dari bahasa Latin yang artinya tumbuh-tumbuhan, sedangkan vora asalnya dari bahasa Latin yaitu vorare yang memiliki arti untuk dimakan atau disantap. Sedangkan dalam pengertian lebih singkat, herbivora merupakan organisme yang memakan tumbuhan atau protein dari tumbuhan.
 Pada umumnya, hewan yang termasuk golongan herbivora biasanya hidup di tempat yang banyak sekali tumbuh rerumputan, seperti padang rumput, hutan dan persawahan. Selain itu, hewan golongan herbivora juga hidup dengan cara berkelompok sesuai dengan jenisnya. Herbivora adalah bentuk hewan yang mengkonsumsi atau memakan tanaman, jamur, dan sebagainya."
-            android:textStyle="bold"
-            android:textSize="13sp"
-            android:justificationMode="inter_word">
-        </TextView>
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:justificationMode="inter_word">
+            </TextView>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </FrameLayout>
 
