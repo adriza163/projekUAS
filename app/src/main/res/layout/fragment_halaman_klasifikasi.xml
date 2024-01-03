@@ -1,136 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/frame_layout"
+    android:id="@+id/constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
     tools:context=".HalamanKlasifikasi">
 
-    <!-- TODO: Update blank fragment layout -->
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="140dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="24dp"
         android:text="Klasifikasi"
-        android:textSize="25sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/button_back"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/ic_back" />
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <ImageView
-        android:layout_marginTop="90dp"
-        android:layout_marginLeft="125dp"
-        android:layout_width="180dp"
-        android:layout_height="160dp"
+        android:id="@+id/image"
+        android:layout_marginTop="24dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/klasifikasi1"
-        />
+        app:layout_constraintTop_toBottomOf="@id/judul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
-        android:layout_width="400dp"
+        android:id="@+id/text_judul"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="64dp"
-        android:layout_marginTop="250dp"
         android:text="Input Karakteristik Hewan"
-        android:textSize="25sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/image"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="295dp"
-        android:layout_marginLeft="30dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextNamaHewan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama Hewan"
-            android:background="@color/gray"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:id="@+id/editTextNamaHewan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_judul"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="MissingConstraints">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="30dp">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextBentukParuh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Bentuk Paruh"
-            android:background="@color/gray"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="405dp"
-        android:layout_marginLeft="30dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextBentukGigi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Bentuk Gigi"
-            android:background="@color/gray"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginLeft="30dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextBentukKaki"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Bentuk Kaki"
-            android:background="@color/gray"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="515dp"
-        android:layout_marginLeft="30dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextBentukMulut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Bentuk Mulut"
-            android:background="@color/gray"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <LinearLayout
-        android:id="@+id/submitLayout"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginLeft="120dp"
-        android:background="@drawable/background2"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="onSubmitClicked">
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Submit"
-            android:textStyle="bold"
-            android:textColor="@color/font"
-            android:textSize="24sp"/>
-    </LinearLayout>
+            android:background="@color/gray"
+            android:hint="Nama Hewan" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/editTextBentukParuh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextNamaHewan"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:hint="Bentuk Paruh" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/editTextBentukGigi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextBentukParuh"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:hint="Bentuk Gigi" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/editTextBentukKaki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextBentukGigi"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:hint="Bentuk Kaki" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/editTextBentukMulut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextBentukKaki"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:hint="Bentuk Mulut" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/deteksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deteksi"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextBentukMulut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Contoh"
+        app:layout_constraintTop_toBottomOf="@id/deteksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

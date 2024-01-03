@@ -1,59 +1,80 @@
 package com.example.kel4_projekuas
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONException
+import org.json.JSONObject
+import java.nio.charset.Charset
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class HalamanKlasifikasi : AppCompatActivity() {
+    private lateinit var nama_hewan: EditText
+    private lateinit var bentuk_paruh: EditText
+    private lateinit var bentuk_gigi: EditText
+    private lateinit var bentuk_kaki: EditText
+    private lateinit var bentuk_mulut: EditText
+    private lateinit var deteksi: Button
+    private lateinit var hasil: TextView
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HalamanKlasifikasi.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HalamanKlasifikasi : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    private val url = "https://adriza163.pythonanywhere.com/predict"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+        setContentView(R.layout.fragment_halaman_klasifikasi)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_halaman_klasifikasi, container, false)
-    }
+        nama_hewan = findViewById(R.id.editTextNamaHewan)
+        bentuk_paruh = findViewById(R.id.editTextBentukParuh)
+        bentuk_gigi = findViewById(R.id.editTextBentukGigi)
+        bentuk_kaki = findViewById(R.id.editTextBentukKaki)
+        bentuk_mulut = findViewById(R.id.editTextBentukMulut)
+        deteksi = findViewById(R.id.deteksi)
+        hasil = findViewById(R.id.hasil)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HalamanKlasifikasi.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HalamanKlasifikasi().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        deteksi.setOnClickListener{
+            val jsonObject = JSONObject()
+            jsonObject.put("bentuk_paruh", bentuk_paruh.toString())
+            jsonObject.put("bentuk_gigi", bentuk_gigi.toString())
+            jsonObject.put("bentuk_kaki", bentuk_kaki.toString())
+            jsonObject.put("bentuk_mulut", bentuk_mulut.toString())
+
+            val requestBody = jsonObject.toString()
+
+            val jsonObjectRequest = object : JsonObjectRequest(
+                Method.POST, url, jsonObject,
+                Response.Listener { response ->
+                    try {
+                        val data = response.getString("kategori_makanan")
+                        hasil.text = if (data == "0"){
+                            "Herbivora"
+                        } else if (data == "1"){
+                            "Karnivora"
+                        } else if (data == "2"){
+                            "Omnivora"
+                        } else {
+                            "Tidak aada kategori makanan"
+                        }
+                    } catch (e: JSONException){
+                        e.printStackTrace()
+                    }
+                },
+                Response.ErrorListener { error ->
+                    Toast.makeText(this@HalamanKlasifikasi, error.message, Toast.LENGTH_SHORT).show()
+                }) {
+                override fun getBodyContentType(): String {
+                    return "application/json"
+                }
+
+                override fun getBody(): ByteArray {
+                    return requestBody.toByteArray(Charset.defaultCharset())
                 }
             }
+            val queue = Volley.newRequestQueue(this@HalamanKlasifikasi)
+            queue.add(jsonObjectRequest)
+        }
     }
 }
