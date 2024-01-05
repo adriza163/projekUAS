@@ -33,6 +33,18 @@
         <activity
             android:name=".HalamanKlasifikasi"
             android:exported="false" />
+        <activity
+            android:name=".DetailPengetahuan"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPengetahuan2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPengetahuan3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailKasus"
+            android:exported="false" />
     </application>
 
 </manifest>
