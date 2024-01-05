@@ -1,37 +1,39 @@
 package com.example.kel4_projekuas
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.material.textfield.TextInputLayout
 import org.json.JSONException
 import org.json.JSONObject
 import java.nio.charset.Charset
 
 class HalamanKlasifikasi : AppCompatActivity() {
-    private lateinit var nama_hewan: EditText
-    private lateinit var bentuk_paruh: EditText
-    private lateinit var bentuk_gigi: EditText
-    private lateinit var bentuk_kaki: EditText
-    private lateinit var bentuk_mulut: EditText
+    private lateinit var nama_hewan: TextInputLayout
+    private lateinit var bentuk_paruh: TextInputLayout
+    private lateinit var bentuk_gigi: TextInputLayout
+    private lateinit var bentuk_kaki: TextInputLayout
+    private lateinit var bentuk_mulut: TextInputLayout
     private lateinit var deteksi: Button
     private lateinit var hasil: TextView
 
     private val url = "https://adriza163.pythonanywhere.com/predict"
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_halaman_klasifikasi)
 
-        nama_hewan = findViewById(R.id.editTextNamaHewan)
-        bentuk_paruh = findViewById(R.id.editTextBentukParuh)
-        bentuk_gigi = findViewById(R.id.editTextBentukGigi)
-        bentuk_kaki = findViewById(R.id.editTextBentukKaki)
-        bentuk_mulut = findViewById(R.id.editTextBentukMulut)
+        nama_hewan = findViewById(R.id.textInputLayoutNamaHewan)
+        bentuk_paruh = findViewById(R.id.textInputLayoutBentukParuh)
+        bentuk_gigi = findViewById(R.id.textInputLayoutBentukGigi)
+        bentuk_kaki = findViewById(R.id.textInputLayoutBentukKaki)
+        bentuk_mulut = findViewById(R.id.textInputLayoutBentukMulut)
         deteksi = findViewById(R.id.deteksi)
         hasil = findViewById(R.id.hasil)
 
