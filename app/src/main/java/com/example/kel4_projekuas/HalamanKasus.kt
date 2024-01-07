@@ -17,15 +17,18 @@ class HalamanKasus : AppCompatActivity() {
         setContentView(R.layout.fragment_halaman_kasus)
 
         val kasus = findViewById<CardView>(R.id.kasus)
-//        val pengetahuan2 = findViewById<CardView>(R.id.pengetahuan2)
-//        val pengetahuan3 = findViewById<CardView>(R.id.pengetahuan3)
+        val kasus2 = findViewById<CardView>(R.id.kasus2)
+        val kasus3 = findViewById<CardView>(R.id.kasus3)
+        val kasus4 = findViewById<CardView>(R.id.kasus4)
 
         val intentKasus = Intent(this@HalamanKasus, DetailKasus::class.java)
-//        val intentPengetahuan2 = Intent(this@HalamanPengetahuan, DetailPengetahuan2::class.java)
-//        val intentPengetahuan3 = Intent(this@HalamanPengetahuan, DetailPengetahuan3::class.java)
+        val intentKasus2 = Intent(this@HalamanKasus, DetailKasus2::class.java)
+        val intentKasus3 = Intent(this@HalamanKasus, DetailKasus3::class.java)
+        val intentKasus4 = Intent(this@HalamanKasus, DetailKasus4::class.java)
 
         kasus.setOnClickListener{startActivity(intentKasus)}
-//        pengetahuan2.setOnClickListener{startActivity(intentPengetahuan2)}
-//        pengetahuan3.setOnClickListener{startActivity(intentPengetahuan3)}
+        kasus2.setOnClickListener{startActivity(intentKasus2)}
+        kasus3.setOnClickListener{startActivity(intentKasus3)}
+        kasus4.setOnClickListener{startActivity(intentKasus4)}
     }
 }

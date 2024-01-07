@@ -45,6 +45,15 @@
         <activity
             android:name=".DetailKasus"
             android:exported="false" />
+        <activity
+            android:name=".DetailKasus2"
+            android:exported="false"/>
+        <activity
+            android:name=".DetailKasus3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailKasus4"
+            android:exported="false" />
     </application>
 
 </manifest>
