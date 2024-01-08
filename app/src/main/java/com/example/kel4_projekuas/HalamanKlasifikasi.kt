@@ -2,10 +2,13 @@ package com.example.kel4_projekuas
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -15,11 +18,11 @@ import org.json.JSONObject
 import java.nio.charset.Charset
 
 class HalamanKlasifikasi : AppCompatActivity() {
-    private lateinit var nama_hewan: TextInputLayout
-    private lateinit var bentuk_paruh: TextInputLayout
-    private lateinit var bentuk_gigi: TextInputLayout
-    private lateinit var bentuk_kaki: TextInputLayout
-    private lateinit var bentuk_mulut: TextInputLayout
+    private lateinit var nama_hewan: EditText
+    private lateinit var bentuk_paruh: EditText
+    private lateinit var bentuk_gigi: EditText
+    private lateinit var bentuk_kaki: EditText
+    private lateinit var bentuk_mulut: EditText
     private lateinit var deteksi: Button
     private lateinit var hasil: TextView
 
@@ -29,33 +32,37 @@ class HalamanKlasifikasi : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_halaman_klasifikasi)
 
-        nama_hewan = findViewById(R.id.textInputLayoutNamaHewan)
-        bentuk_paruh = findViewById(R.id.textInputLayoutBentukParuh)
-        bentuk_gigi = findViewById(R.id.textInputLayoutBentukGigi)
-        bentuk_kaki = findViewById(R.id.textInputLayoutBentukKaki)
-        bentuk_mulut = findViewById(R.id.textInputLayoutBentukMulut)
+        nama_hewan = findViewById(R.id.EditTextNamaHewan)
+        bentuk_paruh = findViewById(R.id.EditTextBentukParuh)
+        bentuk_gigi = findViewById(R.id.EditTextBentukGigi)
+        bentuk_kaki = findViewById(R.id.EditTextBentukKaki)
+        bentuk_mulut = findViewById(R.id.EditTextBentukMulut)
         deteksi = findViewById(R.id.deteksi)
         hasil = findViewById(R.id.hasil)
 
         deteksi.setOnClickListener{
             val jsonObject = JSONObject()
-            jsonObject.put("bentuk_paruh", bentuk_paruh.toString())
-            jsonObject.put("bentuk_gigi", bentuk_gigi.toString())
-            jsonObject.put("bentuk_kaki", bentuk_kaki.toString())
-            jsonObject.put("bentuk_mulut", bentuk_mulut.toString())
+            jsonObject.put("bentuk_paruh", bentuk_paruh.text.toString())
+            jsonObject.put("bentuk_gigi", bentuk_gigi.text.toString())
+            jsonObject.put("bentuk_kaki", bentuk_kaki.text.toString())
+            jsonObject.put("bentuk_mulut", bentuk_mulut.text.toString())
 
+//            jsonObject.put("bentuk_paruh", 2)
+//            jsonObject.put("bentuk_gigi", 0)
+//            jsonObject.put("bentuk_kaki", 1)
+//            jsonObject.put("bentuk_mulut", 2)
             val requestBody = jsonObject.toString()
 
             val jsonObjectRequest = object : JsonObjectRequest(
                 Method.POST, url, jsonObject,
                 Response.Listener { response ->
                     try {
-                        val data = response.getString("kategori_makanan")
-                        hasil.text = if (data == "0"){
+                        val data = response.getInt("kategori_makanan")
+                        hasil.text = if (data == 0){
                             "Herbivora"
-                        } else if (data == "1"){
+                        } else if (data == 1){
                             "Karnivora"
-                        } else if (data == "2"){
+                        } else if (data == 2){
                             "Omnivora"
                         } else {
                             "Tidak aada kategori makanan"
@@ -65,7 +72,9 @@ class HalamanKlasifikasi : AppCompatActivity() {
                     }
                 },
                 Response.ErrorListener { error ->
-                    Toast.makeText(this@HalamanKlasifikasi, error.message, Toast.LENGTH_SHORT).show()
+                    val errorMessage = error?.message ?: "Mohon Lengkapi Data"
+                    Toast.makeText(this@HalamanKlasifikasi, errorMessage, Toast.LENGTH_SHORT).show()
+                    Log.e("Network Error", "Volley Error: $error")
                 }) {
                 override fun getBodyContentType(): String {
                     return "application/json"

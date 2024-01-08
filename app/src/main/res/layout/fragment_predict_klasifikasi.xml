@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".HalamanKlasifikasi">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Klasifikasi"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="24dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/klasifikasi1"
+        app:layout_constraintTop_toBottomOf="@id/judul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Karakteristik Hewan"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/image"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/text_judul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!-- BENTUK PARUH -->
+            <TextView
+                android:id="@+id/textInputLayoutBentukParuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Bentuk Paruh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupBentukParuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutBentukParuh">
+                <RadioButton
+                    android:id="@+id/radiobentukparuh0"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/radio_bentuk_paruh0"
+                    android:textSize="12sp" />
+                <RadioButton
+                    android:id="@+id/radiobentukparuh1"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_paruh1"/>
+                <RadioButton
+                    android:id="@+id/radiobentukparuh2"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_paruh2" />
+
+                <RadioButton
+                    android:id="@+id/radiobentukparuh3"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_paruh3" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textInputLayoutBentukGigi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Bentuk Gigi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+            <RadioGroup
+                android:id="@+id/radioGroupBentukGigi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent">
+                <RadioButton
+                    android:id="@+id/radiobentukgigi0"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/radio_bentuk_gigi0"
+                    android:textSize="12sp" />
+                <RadioButton
+                    android:id="@+id/radiobentukgigi1"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_gigi1"/>
+                <RadioButton
+                    android:id="@+id/radiobentukgigi2"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_gigi2" />
+
+                <RadioButton
+                    android:id="@+id/radiobentukgigi3"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_gigi3" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textInputLayoutBentukKaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Bentuk Kaki"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+            <RadioGroup
+                android:id="@+id/radioGroupBentukKaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent">
+                <RadioButton
+                    android:id="@+id/radiobentukkaki0"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/radio_bentuk_kaki0"
+                    android:textSize="12sp" />
+                <RadioButton
+                    android:id="@+id/radiobentukkaki1"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_kaki1"/>
+                <RadioButton
+                    android:id="@+id/radiobentukkaki2"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_kaki2" />
+
+                <RadioButton
+                    android:id="@+id/radiobentukkaki3"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_kaki3" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/textInputLayoutBentukMulut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Bentuk Mulut"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+            <RadioGroup
+                android:id="@+id/radioBentukMulut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent">
+                <RadioButton
+                    android:id="@+id/radiobentukmulut0"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="@string/radio_bentuk_mulut0"
+                    android:textSize="12sp" />
+                <RadioButton
+                    android:id="@+id/radiobentukmulut1"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_mulut1"/>
+                <RadioButton
+                    android:id="@+id/radiobentukmulut2"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_mulut2" />
+
+                <RadioButton
+                    android:id="@+id/radiobentukmulut3"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_mulut3" />
+                <RadioButton
+                    android:id="@+id/radiobentukmulut4"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_mulut4" />
+                <RadioButton
+                    android:id="@+id/radiobentukmulut5"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textSize="12sp"
+                    android:text="@string/radio_bentuk_mulut5" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/deteksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background3"
+        android:text="Deteksi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="568dp" />
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/deteksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:background="@color/black"
+        android:textColor="@color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

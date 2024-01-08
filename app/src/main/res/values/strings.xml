@@ -7,4 +7,30 @@
     <string name="halaman_klasifikasi">Halaman Klasifikasi</string>
     <string name="hello_blank_fragment">Halaman Klasifikasi</string>
 
+
+    <string name="label_bentuk_paruh">Bentuk Paruh</string>
+    <string name="radio_bentuk_paruh0">Panjang</string>
+    <string name="radio_bentuk_paruh1">Pendek</string>
+    <string name="radio_bentuk_paruh2">Kecil</string>
+    <string name="radio_bentuk_paruh3">Lebih Panjang</string>
+
+    <string name="label_bentuk_gigi">Bentuk Gigi</string>
+    <string name="radio_bentuk_gigi0">Tidak ada</string>
+    <string name="radio_bentuk_gigi1">Tumpul</string>
+    <string name="radio_bentuk_gigi2">Runcing</string>
+    <string name="radio_bentuk_gigi3">Tajam</string>
+
+    <string name="label_bentuk_kaki">Bentuk Kaki</string>
+    <string name="radio_bentuk_kaki0">Tidak ada</string>
+    <string name="radio_bentuk_kaki1">Tumpul</string>
+    <string name="radio_bentuk_kaki2">Runcing</string>
+    <string name="radio_bentuk_kaki3">Tajam</string>
+
+    <string name="label_bentuk_mulut">Bentuk Mulut</string>
+    <string name="radio_bentuk_mulut0">Tidak ada</string>
+    <string name="radio_bentuk_mulut1">Kecil</string>
+    <string name="radio_bentuk_mulut2">Lebih Kecil</string>
+    <string name="radio_bentuk_mulut3">Sedang</string>
+    <string name="radio_bentuk_mulut4">Luas</string>
+    <string name="radio_bentuk_mulut5">Lebar</string>
 </resources>
