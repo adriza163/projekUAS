@@ -177,7 +177,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text=""
-        android:background="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
