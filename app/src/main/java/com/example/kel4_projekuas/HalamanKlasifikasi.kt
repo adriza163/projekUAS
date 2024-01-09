@@ -8,7 +8,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -18,7 +17,6 @@ import org.json.JSONObject
 import java.nio.charset.Charset
 
 class HalamanKlasifikasi : AppCompatActivity() {
-    private lateinit var nama_hewan: EditText
     private lateinit var bentuk_paruh: EditText
     private lateinit var bentuk_gigi: EditText
     private lateinit var bentuk_kaki: EditText
@@ -27,12 +25,12 @@ class HalamanKlasifikasi : AppCompatActivity() {
     private lateinit var hasil: TextView
 
     private val url = "https://adriza163.pythonanywhere.com/predict"
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_halaman_klasifikasi)
 
-        nama_hewan = findViewById(R.id.EditTextNamaHewan)
         bentuk_paruh = findViewById(R.id.EditTextBentukParuh)
         bentuk_gigi = findViewById(R.id.EditTextBentukGigi)
         bentuk_kaki = findViewById(R.id.EditTextBentukKaki)
@@ -40,17 +38,13 @@ class HalamanKlasifikasi : AppCompatActivity() {
         deteksi = findViewById(R.id.deteksi)
         hasil = findViewById(R.id.hasil)
 
-        deteksi.setOnClickListener{
+        deteksi.setOnClickListener {
             val jsonObject = JSONObject()
-            jsonObject.put("bentuk_paruh", bentuk_paruh.text.toString())
-            jsonObject.put("bentuk_gigi", bentuk_gigi.text.toString())
-            jsonObject.put("bentuk_kaki", bentuk_kaki.text.toString())
-            jsonObject.put("bentuk_mulut", bentuk_mulut.text.toString())
+            jsonObject.put("bentuk_paruh", mapBentukParuhToInt(bentuk_paruh.text.toString()))
+            jsonObject.put("bentuk_gigi", mapBentukGigiToInt(bentuk_gigi.text.toString()))
+            jsonObject.put("bentuk_kaki", mapBentukKakiToInt(bentuk_kaki.text.toString()))
+            jsonObject.put("bentuk_mulut", mapBentukMulutToInt(bentuk_mulut.text.toString()))
 
-//            jsonObject.put("bentuk_paruh", 2)
-//            jsonObject.put("bentuk_gigi", 0)
-//            jsonObject.put("bentuk_kaki", 1)
-//            jsonObject.put("bentuk_mulut", 2)
             val requestBody = jsonObject.toString()
 
             val jsonObjectRequest = object : JsonObjectRequest(
@@ -58,16 +52,13 @@ class HalamanKlasifikasi : AppCompatActivity() {
                 Response.Listener { response ->
                     try {
                         val data = response.getInt("kategori_makanan")
-                        hasil.text = if (data == 0){
-                            "Herbivora"
-                        } else if (data == 1){
-                            "Karnivora"
-                        } else if (data == 2){
-                            "Omnivora"
-                        } else {
-                            "Tidak aada kategori makanan"
+                        hasil.text = when (data) {
+                            0 -> "Herbivora"
+                            1 -> "Karnivora"
+                            2 -> "Omnivora"
+                            else -> "Tidak ada kategori makanan"
                         }
-                    } catch (e: JSONException){
+                    } catch (e: JSONException) {
                         e.printStackTrace()
                     }
                 },
@@ -86,6 +77,45 @@ class HalamanKlasifikasi : AppCompatActivity() {
             }
             val queue = Volley.newRequestQueue(this@HalamanKlasifikasi)
             queue.add(jsonObjectRequest)
+        }
+    }
+
+    private fun mapBentukParuhToInt(bentukParuhText: String): Int {
+        return when (bentukParuhText.toLowerCase()) {
+            "panjang" -> 0
+            "pendek" -> 1
+            "kecil" -> 2
+            "lebih panjang" -> 3
+            else -> -1 // Handle invalid input as needed
+        }
+    }
+    private fun mapBentukGigiToInt(bentukGigiText: String): Int {
+        return when (bentukGigiText.toLowerCase()) {
+            "tidak ada" -> 0
+            "tumpul" -> 1
+            "runcing" -> 2
+            "tajam" -> 3
+            else -> -1 // Handle invalid input as needed
+        }
+    }
+    private fun mapBentukKakiToInt(bentukKakiText: String): Int {
+        return when (bentukKakiText.toLowerCase()) {
+            "0" -> 0
+            "2" -> 1
+            "4" -> 2
+            "6" -> 3
+            else -> -1 // Handle invalid input as needed
+        }
+    }
+    private fun mapBentukMulutToInt(bentukMulutText: String): Int {
+        return when (bentukMulutText.toLowerCase()) {
+            "tidak ada" -> 0
+            "lebih kecil" -> 1
+            "kecil" -> 2
+            "sedang" -> 3
+            "luas" -> 4
+            "lebar" -> 5
+            else -> -1 // Handle invalid input as needed
         }
     }
 }
