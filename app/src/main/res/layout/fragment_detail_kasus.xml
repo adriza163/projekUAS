@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".HalamanPengetahuan" >
+    tools:context=".HalamanKasus" >
 
     <TextView
         android:id="@+id/judul"
@@ -49,7 +49,7 @@
             android:background="@drawable/herbi"
             app:layout_constraintTop_toBottomOf="@+id/judul"
             android:scaleType="centerCrop"
-            android:src="@drawable/sapi"
+            android:src="@drawable/kasuskucing"
             tools:ignore="MissingConstraints" />
 
     </androidx.cardview.widget.CardView>
@@ -57,7 +57,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardkasus"
                 android:layout_width="330dp"
-                android:layout_height="400dp"
+                android:layout_height="450dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
@@ -77,7 +77,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    android:text="Berdasarkan hasil wawancara dengan salah satu masyarakat di Pekanbaru yaitu Rian Ardi Wibowo. seorang pemelihara kucing di Pekanbaru, mengalami tantangan kesehatan pada kucing kesayangannya akibat kesalahan dalam memilih jenis makanan. Dalam suatu wawancara, Rian mengungkapkan bahwa ia pernah memberikan kucingnya makanan manusia, yakni pastel, tanpa menyadari potensi risiko kesehatan yang dapat timbul. \n\nSetelah memberikan pastel tersebut kepada kucingnya, Rian menyaksikan kucingnya mengalami muntah dan gejala tidak nyaman lainnya. Kesalahan ini mengundang perhatian terhadap pentingnya pemilihan makanan yang tepat untuk hewan peliharaan, terutama kucing yang memiliki kebutuhan nutrisi khusus."
+                    android:text="  Berdasarkan hasil wawancara dengan salah satu masyarakat di Pekanbaru yaitu Rian Ardi Wibowo. seorang pemelihara kucing di Pekanbaru, mengalami tantangan kesehatan pada kucing kesayangannya akibat kesalahan dalam memilih jenis makanan. Dalam suatu wawancara, Rian mengungkapkan bahwa ia pernah memberikan kucingnya makanan manusia, yakni pastel, tanpa menyadari potensi risiko kesehatan yang dapat timbul.
+                                    \n\n Setelah memberikan pastel tersebut kepada kucingnya, Rian menyaksikan kucingnya mengalami muntah dan gejala tidak nyaman lainnya. Kesalahan ini mengundang perhatian terhadap pentingnya pemilihan makanan yang tepat untuk hewan peliharaan, terutama kucing yang memiliki kebutuhan nutrisi khusus."
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:justificationMode="inter_word">

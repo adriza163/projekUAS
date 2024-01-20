@@ -67,8 +67,8 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="40dp"
-                android:textSize="16sp"
-                android:text="Herbivora merupakan jenis he......"/>
+                android:textSize="14sp"
+                android:text="Apa itu Herbivora? Ayo baca disini"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -78,7 +78,7 @@
             app:layout_constraintTop_toBottomOf="@+id/pengetahuan"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/background1"
             app:cardCornerRadius="18dp"
             tools:ignore="MissingConstraints">
@@ -103,8 +103,8 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="40dp"
-                android:textSize="16sp"
-                android:text="kelompok hewan pemakan da...... "/>
+                android:textSize="14sp"
+                android:text="Apa itu Karnivora? Ayo baca disini"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/pengetahuan3"
@@ -113,7 +113,7 @@
             app:layout_constraintTop_toBottomOf="@+id/pengetahuan2"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/background1"
             app:cardCornerRadius="18dp"
             tools:ignore="MissingConstraints">
@@ -138,8 +138,8 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="40dp"
-                android:textSize="16sp"
-                android:text="hewan pemakan segala. Dari tu..... "/>
+                android:textSize="14sp"
+                android:text="Apa itu Omnivora? Ayo baca disini"/>
         </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

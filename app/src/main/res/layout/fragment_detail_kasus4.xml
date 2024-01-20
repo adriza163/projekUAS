@@ -11,15 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green"
-        tools:context=".HalamanPengetahuan" >
+        tools:context=".HalamanKasus" >
 
         <TextView
             android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Kasus 1"
-            android:textSize="25sp"
+            android:text="Kesalahan Pemberian Makanan \npada Burung di Taman Burung"
+            android:textSize="20sp"
+            android:textAlignment="center"
             android:textStyle="bold"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,7 @@
                 android:background="@drawable/herbi"
                 app:layout_constraintTop_toBottomOf="@+id/judul"
                 android:scaleType="centerCrop"
-                android:src="@drawable/sapi"
+                android:src="@drawable/kasusburung"
                 tools:ignore="MissingConstraints" />
 
         </androidx.cardview.widget.CardView>
@@ -56,7 +57,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardkasus"
             android:layout_width="330dp"
-            android:layout_height="310dp"
+            android:layout_height="400dp"
             android:layout_marginTop="36dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
@@ -68,6 +69,7 @@
             tools:ignore="MissingConstraints,NotSibling">
 
             <TextView
+                android:id="@+id/atas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -75,11 +77,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:text="Seekor sapi mati akibat diberi makanan yang tidak sesuai dengan dietnya. Badak putih umumnya merupakan herbivora pemakan rumput, tetapi disalahpahami saat diberikan makanan yang mengandung bahan-bahan yang tidak sesuai dengan sistem pencernaan mereka. Pemberian makanan yang tidak sesuai menyebabkan gangguan pencernaan yang serius dan berujung pada kematian hewan tersebut."
-                android:textSize="18sp"
+                android:text="  Pada tahun 2019, di sebuah taman burung, terjadi kesalahan pemberian makanan yang menyebabkan gangguan pada beberapa jenis burung. Beberapa pengunjung memberikan makanan manusia yang tidak sesuai untuk dikonsumsi oleh burung, seperti memberikan makanan yang mengandung gula atau garam. Hal ini menyebabkan masalah kesehatan pada burung, termasuk gangguan pencernaan dan penurunan kesehatan secara umum. Kejadian ini menyoroti pentingnya memberikan makanan yang sesuai dengan kebutuhan alami dan nutrisi burung."
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:justificationMode="inter_word">
             </TextView>
+
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

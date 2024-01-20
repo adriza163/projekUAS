@@ -53,24 +53,24 @@
                     android:layout_marginLeft="18dp"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:background="@drawable/sapi"/>
+                    android:background="@drawable/kasuskucing"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Kasus 1"/>
+                    android:textSize="13sp"
+                    android:text="Kesalahan Pemilihan Makanan pada kucing"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="24dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginTop="40dp"
-                    android:textSize="16sp"
-                    android:text="Memberi makanan daging kepada hewan herbivora"/>
+                    android:layout_marginTop="50dp"
+                    android:textSize="12sp"
+                    android:text="Oleh Rian Ardi Wibowo di Pekanbaru (2023)"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -80,7 +80,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/kasus"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/background1"
                 app:cardCornerRadius="18dp"
                 tools:ignore="MissingConstraints">
@@ -89,24 +89,24 @@
                     android:layout_marginLeft="18dp"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:background="@drawable/sapi"/>
+                    android:background="@drawable/kasuskelinci"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginTop="20dp"
                     android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Kasus 2"/>
+                    android:textSize="13sp"
+                    android:text="Dampak Pemberian Daging pada Kelinci"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="24dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginTop="40dp"
-                    android:textSize="16sp"
-                    android:text="Memberi makanan daging kepada hewan herbivora"/>
+                    android:layout_marginTop="45dp"
+                    android:textSize="12sp"
+                    android:text="Oleh Olvy Olivia di Pekanbaru (2022)"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -116,7 +116,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/kasus2"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/background1"
                 app:cardCornerRadius="18dp"
                 tools:ignore="MissingConstraints">
@@ -125,24 +125,24 @@
                     android:layout_marginLeft="18dp"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:background="@drawable/sapi"/>
+                    android:background="@drawable/kasusherbivora"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="12dp"
                     android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Kasus 3"/>
+                    android:textSize="13sp"
+                    android:text="Kesalahan pemberian makanan pada hewan Herbivora"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginTop="40dp"
-                    android:textSize="16sp"
-                    android:text="Memberi makanan daging kepada hewan herbivora"/>
+                    android:layout_marginTop="45dp"
+                    android:textSize="12sp"
+                    android:text="Oleh Pak Heriadi di Kebun binatang Pekanbaru (2021)"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -152,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/kasus3"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/background1"
                 app:cardCornerRadius="18dp"
                 tools:ignore="MissingConstraints">
@@ -161,96 +161,24 @@
                     android:layout_marginLeft="18dp"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:background="@drawable/sapi"/>
+                    android:background="@drawable/kasusburung"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginTop="20dp"
                     android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="Kasus 4"/>
+                    android:textSize="13sp"
+                    android:text="Kesalahan Pemberian Makanan pada Burung"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="24dp"
                     android:layout_marginStart="100dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginTop="40dp"
-                    android:textSize="16sp"
-                    android:text="Memberi makanan daging kepada hewan herbivora"/>
+                    android:layout_marginTop="55dp"
+                    android:textSize="12sp"
+                    android:text="Taman Burung (2019)"/>
             </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/kasus5"
-            android:layout_width="match_parent"
-            android:layout_height="87dp"
-            app:layout_constraintTop_toBottomOf="@+id/kasus4"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/background1"
-            app:cardCornerRadius="18dp"
-            tools:ignore="MissingConstraints">
-            <ImageView
-                android:layout_marginTop="9dp"
-                android:layout_marginLeft="18dp"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/sapi"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginTop="20dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:text="Kasus 4"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginTop="40dp"
-                android:textSize="16sp"
-                android:text="Memberi makanan daging kepada hewan herbivora"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/kasus6"
-            android:layout_width="match_parent"
-            android:layout_height="87dp"
-            app:layout_constraintTop_toBottomOf="@+id/kasus5"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/background1"
-            app:cardCornerRadius="18dp"
-            tools:ignore="MissingConstraints">
-            <ImageView
-                android:layout_marginTop="9dp"
-                android:layout_marginLeft="18dp"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/sapi"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginTop="20dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:text="Kasus 4"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="24dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginTop="40dp"
-                android:textSize="16sp"
-                android:text="Memberi makanan daging kepada hewan herbivora"/>
-        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
